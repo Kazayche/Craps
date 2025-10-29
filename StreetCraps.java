@@ -10,14 +10,14 @@ public class StreetCraps {
         int computerMoney = 100;
         
         
-        
+        // Applied DeMorgan Law
         // Play until someone loses all money
         while (playerMoney > 0 && computerMoney > 0) {
             
             System.out.println("Your money: $" + playerMoney);
             System.out.println("Computer money: $" + computerMoney);
             
-            System.out.print("Enter bet: $");
+            System.out.print("Enter bet:");
             int bet = input.nextInt();
             
             // Check if bet is valid
@@ -68,13 +68,13 @@ public class StreetCraps {
                     System.out.println("You rolled: " + die1 + " + " + die2 + " = " + total);
                     
                     if (total == point) {
-                        System.out.println("You win!");
+                        System.out.println("You win");
                         playerMoney = playerMoney + bet;
                         computerMoney = computerMoney - bet;
                         gameOver = true;
                     } 
                     else if (total == 7) {
-                        System.out.println("Computer wins!");
+                        System.out.println("Computer wins");
                         playerMoney = playerMoney - bet;
                         computerMoney = computerMoney + bet;
                         gameOver = true;
@@ -84,11 +84,11 @@ public class StreetCraps {
         }
         
         // Show final winner
-        System.out.println("Game over!");
+        System.out.println("Game over");
         if (playerMoney > 0) {
-            System.out.println("You won the game!");
+            System.out.println("You won the game");
         } else {
-            System.out.println("Computer won the game!");
+            System.out.println("Computer won the game");
         }
         
         input.close();
